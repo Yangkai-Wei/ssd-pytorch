@@ -33,7 +33,7 @@ if __name__ == "__main__":
     Freeze_epoch = 50
     Epoch = 100
 
-    Batch_size = 4
+    Batch_size = 8
     #-------------------------------#
     #   Dataloder的使用
     #-------------------------------#

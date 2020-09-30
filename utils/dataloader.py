@@ -28,11 +28,16 @@ class SSDDataset(Dataset):
 
     def get_random_data(self, annotation_line, input_shape, jitter=.3, hue=.1, sat=1.5, val=1.5):
         """实时数据增强的随机预处理"""
+        # line = annotation_line.split('.jpg')
         line = annotation_line.split()
-        image = Image.open(line[0])
+        rootpath = 'F:/3 GitHub/data/Machine Learning Data/VOCdevkit/VOC2007/JPEGImages/'
+        image_idx = line[3].split('/')[-1]
+        # image = Image.open(line[0])
+        # image = Image.open(line[0]+'.jpg')
+        image = Image.open(rootpath+image_idx)
         iw, ih = image.size
         h, w = input_shape
-        box = np.array([np.array(list(map(int, box.split(',')))) for box in line[1:]])
+        box = np.array([np.array(list(map(int, box.split(',')))) for box in line[4:]])
 
         # 调整图片大小
         new_ar = w / h * self.rand(1 - jitter, 1 + jitter) / self.rand(1 - jitter, 1 + jitter)

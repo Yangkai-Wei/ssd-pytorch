@@ -1,9 +1,10 @@
 import os
 import random 
  
-xmlfilepath=r'./VOCdevkit/VOC2007/Annotations'
-saveBasePath=r"./VOCdevkit/VOC2007/ImageSets/Main/"
- 
+# xmlfilepath=r'./VOCdevkit/VOC2007/Annotations'
+# saveBasePath=r"./VOCdevkit/VOC2007/ImageSets/Main/"
+xmlfilepath='F:/3 GitHub/data/Machine Learning Data/VOCdevkit/VOC2007/Annotations'
+saveBasePath='F:/3 GitHub/data/Machine Learning Data/VOCdevkit/VOC2007/ImageSets/Main/'
 trainval_percent=1
 train_percent=1
 
